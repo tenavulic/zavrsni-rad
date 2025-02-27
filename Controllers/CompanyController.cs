@@ -43,7 +43,12 @@ namespace WebApplication2.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Company>> GetCompany(int id)
         {
-            var company = await _context.Companies.FindAsync(id);
+            
+            var company = await _context.Companies
+                .Include (c => c.Country)
+                .Include (c => c.Urls)
+                .FirstOrDefaultAsync(c => c.CompanyId == id);
+            
 
             if (company == null)
             {
@@ -87,7 +92,7 @@ namespace WebApplication2.Controllers
             {
                 await _context.SaveChangesAsync();
             }
-            catch (DbUpdateConcurrencyException)
+            catch (DbUpdateConcurrencyException) 
             {
                 if (!await CompanyExists(id))
                 {
