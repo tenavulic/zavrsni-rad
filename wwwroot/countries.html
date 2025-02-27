@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Countries - Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Overview</a> |
+        <a href="countries.html">Countries</a> |
+        <a href="companies.html">Companies</a> |
+        <a href="urls.html">URLs</a> |
+        <a href="incomes.html">Incomes</a>
+    </nav>
+    <h1>Manage Countries</h1>
+
+    <!-- Form for adding/editing a country -->
+    <h2>Add / Edit Country</h2>
+    <form id="countryForm">
+        <input type="hidden" id="countryId">
+        <label for="countryName">Name:</label>
+        <input type="text" id="countryName" required>
+        <button type="submit">Save</button>
+    </form>
+
+    <!-- Table for listing countries -->
+    <table id="countriesTable">
+        <thead>
+            <tr>
+                <th>Country ID</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows populated dynamically -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

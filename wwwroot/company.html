@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Company Details - Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Overview</a> |
+        <a href="countries.html">Countries</a> |
+        <a href="companies.html">Companies</a> |
+        <a href="urls.html">URLs</a> |
+        <a href="incomes.html">Incomes</a>
+    </nav>
+    <h1>Company Details</h1>
+
+    <!-- Form to edit company details -->
+    <form id="companyDetailForm">
+        <input type="hidden" id="detailCompanyId">
+        <label for="detailCompanyName">Name:</label>
+        <input type="text" id="detailCompanyName" required>
+
+        <label for="detailCompanyCountry">Country:</label>
+        <select id="detailCompanyCountry">
+            <!-- Options populated from /api/country -->
+        </select>
+
+        <label for="detailCompanyOwnedBy">Owned By:</label>
+        <input type="text" id="detailCompanyOwnedBy">
+
+        <label for="detailCompanyEstablished">Established:</label>
+        <input type="number" id="detailCompanyEstablished">
+
+        <label for="detailCompanyAddress">Address:</label>
+        <input type="text" id="detailCompanyAddress">
+
+        <label for="detailCompanyEmail">Email:</label>
+        <input type="email" id="detailCompanyEmail">
+
+        <button type="submit">Save Company Details</button>
+    </form>
+
+    <!-- Section to manage the company's URLs -->
+    <h2>Company URLs</h2>
+    <form id="companyUrlForm">
+        <input type="hidden" id="companyUrlId">
+        <label for="companyUrlLink">URL:</label>
+        <input type="text" id="companyUrlLink" required>
+        <button type="submit">Add URL</button>
+    </form>
+
+    <table id="companyUrlsTable">
+        <thead>
+            <tr>
+                <th>URL</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Company URLs will be populated here -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

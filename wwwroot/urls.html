@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage URLs - Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Overview</a> |
+        <a href="countries.html">Countries</a> |
+        <a href="companies.html">Companies</a> |
+        <a href="urls.html">URLs</a> |
+        <a href="incomes.html">Incomes</a>
+    </nav>
+    <h1>Manage URLs</h1>
+
+    <!-- Form for adding/editing a URL -->
+    <h2>Add / Edit URL</h2>
+    <form id="urlForm">
+        <label for="urlValue">URL:</label>
+        <input type="text" id="urlValue" required>
+        <br>
+        <label for="urlCompanyId">Company:</label>
+        <select id="urlCompanyId" required>
+            <option value="">Select Company</option>
+            <!-- Company options will be added dynamically -->
+        </select>
+        <br>
+        <label for="urlCountryId">Country:</label>
+        <select id="urlCountryId" required>
+            <option value="">Select Country</option>
+            <!-- Country options will be added dynamically -->
+        </select>
+        <br>
+        <button type="submit">Save</button>
+    </form>
+
+    <!-- Table for listing URLs -->
+    <table id="urlsTable">
+        <thead>
+            <tr>
+                <th>URL</th>
+                <th>Company</th>
+                <th>Country</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be populated dynamically -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

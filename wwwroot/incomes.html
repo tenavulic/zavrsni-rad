@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Incomes - Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Overview</a> |
+        <a href="countries.html">Countries</a> |
+        <a href="companies.html">Companies</a> |
+        <a href="urls.html">URLs</a> |
+        <a href="incomes.html">Incomes</a>
+    </nav>
+    <h1>Manage Incomes</h1>
+
+
+    <!-- Form for adding/editing an income record -->
+    <h2>Add / Edit Income</h2>
+    <form id="incomeForm">
+        <input type="hidden" id="incomeId">
+        <label for="incomeCompanyId">Company ID:</label>
+        <input type="number" id="incomeCompanyId" required>
+        <br>
+        <label for="incomeYear">Year:</label>
+        <input type="number" id="incomeYear" required>
+        <br>
+        <label for="incomeAmount">Amount:</label>
+        <input type="number" id="incomeAmount" step="0.01" required>
+        <br>
+        <button type="submit">Save</button>
+    </form>
+
+    <!-- Table for listing incomes -->
+    <table id="incomesTable">
+        <thead>
+            <tr>
+                <th>Income ID</th>
+                <th>Company ID</th>
+                <th>Year</th>
+                <th>Amount</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows populated dynamically -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

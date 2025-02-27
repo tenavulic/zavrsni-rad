@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Companies & Income Overview</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Companies & Income Overview</h1>
+
+    <!-- Filter and Order Controls -->
+    <div class="filters">
+        <label for="yearFilter">Filter by Year:</label>
+        <select id="yearFilter">
+            <option value="all">All Years</option>
+            <!-- Year options added dynamically -->
+        </select>
+
+        <label for="countryFilter">Filter by Country:</label>
+        <select id="countryFilter">
+            <option value="all">All Countries</option>
+            <!-- Country options added dynamically -->
+        </select>
+
+        <label for="searchName">Search by Name:</label>
+        <input type="text" id="searchName" placeholder="Enter company name">
+
+        <label for="orderSelect">Order by:</label>
+        <select id="orderSelect">
+            <option value="alphabetical">Alphabetical</option>
+            <option value="income">Income</option>
+        </select>
+    </div>
+
+    <!-- Table to display companies, their country, and aggregated income -->
+    <table id="companiesTable">
+        <thead>
+            <tr>
+                <th>Company Name</th>
+                <th>Country</th>
+                <th>Aggregated Income</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data rows inserted dynamically -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
